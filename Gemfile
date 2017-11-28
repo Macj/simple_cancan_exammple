@@ -35,12 +35,21 @@ gem "cancan"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec'
+  gem 'rspec-rails', '~> 3.7.2'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'chromedriver-helper'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'database_cleaner'
+  gem 'cucumber'
 end
 
 group :development do
